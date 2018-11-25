@@ -52,7 +52,7 @@ public class RedissonAutoConfiguration {
      */
     @Bean
     @ConditionalOnProperty(name = "redisson.address")
-    RedissonClient redissonSingle() {
+    public RedissonClient redissonSingle() {
         Config config = new Config();
         SingleServerConfig serverConfig = config.useSingleServer()
                 .setAddress(redssionProperties.getAddress())
@@ -73,7 +73,7 @@ public class RedissonAutoConfiguration {
      * @return
      */
     @Bean
-    RedissonDistributedLocker redissonDistributedLocker(RedissonClient redissonClient) {
+    public RedissonDistributedLocker redissonDistributedLocker(RedissonClient redissonClient) {
         RedissonDistributedLockerImpl locker = new RedissonDistributedLockerImpl();
         locker.setRedissonClient(redissonClient);
         RedissLockUtil.setLocker(locker);

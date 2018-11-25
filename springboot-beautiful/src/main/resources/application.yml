@@ -38,6 +38,21 @@ spring:
     enabled: true
     mode: HTML
     # prefix: classpath:/templates  # 基本映射路径
+  # springboot 和 redisson 整合 starter
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password: 123456
+    ssl: false
+    timeout: 0
+    #cluster:
+    #  max-redirects:
+    #sentinel:
+    #  master:
+    #path to redisson.yaml or redisson.json
+    # spring.redis.redisson.config=classpath:redisson.yaml
+
 # mybatis 配置
 mybatis:
   # 指定全局配置文件位置
@@ -57,8 +72,10 @@ pagehelper:
   # redisson lock 单机模式
 redisson:
   address: redis://10.18.75.115:6379
-  password:
-
+  password: 123456
+  sentinelAddresses:
+    - 127.0.0.1
+  master-name: master
 #  哨兵模式
 #  https://www.cnblogs.com/yangzhilong/p/7605807.html
 #  redisson.master-name=mymaster
