@@ -12,14 +12,14 @@ import org.springframework.stereotype.Component;
 /**
  * Content :给添加@KLock切面加锁处理
  */
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class KlockAspectHandler {
 
-    @Autowired
+    //@Autowired
     LockFactory lockFactory;
 
-    @Around(value = "@annotation(klock)")
+   // @Around(value = "@annotation(klock)")
     public Object around(ProceedingJoinPoint joinPoint, Klock klock) throws Throwable {
         Lock lock = lockFactory.getLock(joinPoint,klock);
         boolean currentThreadLock = false;

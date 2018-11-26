@@ -1,3 +1,10 @@
 1.一个完整的列子
 2. 包含， springbootweb+mybatis分页插件+thymeleaf模板
 3. idea开发工具 需要下载 IntelliJ Lombok plugin 插件
+
+
+CREATE TABLE `department` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`name` varchar(255) DEFAULT NULL ,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8

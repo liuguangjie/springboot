@@ -14,13 +14,13 @@ import org.springframework.util.ClassUtils;
  * Created by kl on 2017/12/29.
  * Content :klock自动装配
  */
-@Import({KlockAspectHandler.class})
+//@Import({KlockAspectHandler.class})
 public class KlockAutoConfiguration {
 
-    @Autowired
+    //@Autowired
     private KlockConfig klockConfig;
 
-    @Bean(destroyMethod = "shutdown")
+    //@Bean(destroyMethod = "shutdown")
     RedissonClient redisson() throws Exception {
         Config config = new Config();
         if(klockConfig.getClusterServer()!=null){
@@ -37,17 +37,17 @@ public class KlockAutoConfiguration {
         return Redisson.create(config);
     }
 
-    @Bean
+    //@Bean
     public LockInfoProvider lockInfoProvider(){
         return new LockInfoProvider();
     }
 
-    @Bean
+    //@Bean
     public BusinessKeyProvider businessKeyProvider(){
         return new BusinessKeyProvider();
     }
 
-    @Bean
+    //@Bean
     public LockFactory lockFactory(){
         return new LockFactory();
     }

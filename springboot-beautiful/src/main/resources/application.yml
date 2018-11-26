@@ -81,3 +81,21 @@ redisson:
 #  redisson.master-name=mymaster
 #  redisson.password=xxxx
 #  redisson.sentinel-addresses=10.47.91.83:26379,10.47.91.83:26380,10.47.91.83:26381
+
+# 日志
+logging:
+  level:
+    com:
+      helloworld: debug
+      springboot:
+        mapper: debug
+
+
+  #指导文件路径默认当前路径
+  #file: test.log
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%t]){faint} %clr(%-40.40logger{39}){cyan}[lineno:%line]    %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+    #文件的输出格式
+    #file:
+  # 指定路径
+  #path:

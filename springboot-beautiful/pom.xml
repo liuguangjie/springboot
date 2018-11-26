@@ -6,6 +6,8 @@
     <groupId>com.springboot</groupId>
     <artifactId>springboot-beautiful</artifactId>
     <version>0.0.1</version>
+    <!-- 整合 tomcat war包 -->
+    <!--<packaging>war</packaging>-->
     <packaging>jar</packaging>
 
     <name>springboot-beautiful</name>

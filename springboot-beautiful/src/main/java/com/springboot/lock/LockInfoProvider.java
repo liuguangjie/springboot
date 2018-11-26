@@ -14,10 +14,10 @@ public class LockInfoProvider {
     public static final String LOCK_NAME_SEPARATOR = ".";
 
 
-    @Autowired
+    //@Autowired
     private KlockConfig klockConfig;
 
-    @Autowired
+    //@Autowired
     private BusinessKeyProvider businessKeyProvider;
 
     public LockInfo get(ProceedingJoinPoint joinPoint, Klock klock) {

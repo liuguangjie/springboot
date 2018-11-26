@@ -17,15 +17,15 @@ import java.util.Map;
 public class LockFactory  {
     Logger logger= LoggerFactory.getLogger(getClass());
 
-    @Autowired
+    //@Autowired
     private RedissonClient redissonClient;
 
-    @Autowired
+    //@Autowired
     private LockInfoProvider lockInfoProvider;
 
     private static final Map<LockType,Lock> lockMap= new HashMap<>();
 
-    @PostConstruct
+    //@PostConstruct
     public void init(){
         lockMap.put(LockType.Reentrant,new ReentrantLock(redissonClient));
         lockMap.put(LockType.Fair,new FairLock(redissonClient));
