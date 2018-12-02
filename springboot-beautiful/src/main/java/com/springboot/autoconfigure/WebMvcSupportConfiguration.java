@@ -1,27 +1,18 @@
 package com.springboot.autoconfigure;
 
-import com.springboot.autoconfigure.interceptor.InterceptorLogin;
-import com.springboot.web.filter.MyFilter;
-import com.springboot.web.listener.MyListener;
-import com.springboot.web.servlet.MyServlet;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import com.springboot.web.interceptor.InterceptorLogin;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import java.util.Arrays;
-
 /**
- * 配置web相关的 类
+ * webmvc 额外的配置
  */
 @Configuration
-public class WebMvcConfig extends WebMvcConfigurerAdapter {
+public class WebMvcSupportConfiguration extends WebMvcConfigurerAdapter {
 
     /**
-     * 注册拦截器
+     * 注册spring拦截器
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {

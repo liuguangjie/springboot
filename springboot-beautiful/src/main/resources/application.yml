@@ -77,7 +77,7 @@ redisson:
     - 127.0.0.1
   master-name: master
 #  哨兵模式
-#  https://www.cnblogs.com/yangzhilong/p/7605807.html
+#  参考文档 https://www.cnblogs.com/yangzhilong/p/7605807.html
 #  redisson.master-name=mymaster
 #  redisson.password=xxxx
 #  redisson.sentinel-addresses=10.47.91.83:26379,10.47.91.83:26380,10.47.91.83:26381
@@ -88,7 +88,7 @@ logging:
     com:
       helloworld: debug
       springboot:
-        mapper: debug
+        mapper: debug #打印 mybatis  sql语句
 
 
   #指导文件路径默认当前路径

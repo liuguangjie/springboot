@@ -7,4 +7,6 @@ import java.util.List;
 public interface DepartmentMapper {
 
     List<Department> selectDeptList();
+
+    void insertDepartment(Department department);
 }

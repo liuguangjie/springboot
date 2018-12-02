@@ -1,4 +1,4 @@
-package com.springboot.autoconfigure.interceptor;
+package com.springboot.web.interceptor;
 
 
 import org.springframework.web.servlet.HandlerInterceptor;

@@ -7,4 +7,8 @@
     <select id="selectDeptList" resultType="com.springboot.entity.Department" >
         select * from department
     </select>
+
+    <insert id="insertDepartment" parameterType="com.springboot.entity.Department">
+        insert into department(name) values(#{name})
+    </insert>
 </mapper>

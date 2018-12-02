@@ -50,4 +50,14 @@ public class DeptController {
         model.addAttribute("list", deptService.listDepts());
         return "dept";
     }
+
+    @GetMapping("/add")
+    public String add(String name) {
+
+        Department department = new Department();
+        department.setName(name);
+        deptService.saveDepartment(department);
+
+        return "hello world....";
+    }
 }

@@ -11,7 +11,7 @@ import javax.sql.DataSource;
  * mybatis配置
  */
 @Configuration
-public class MybatisConfig {
+public class MybatisSupportConfiguration {
 
     /***
      * Druid数据源 启用配置文件

@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @MapperScan(value = "com.springboot.mapper") // mybatis mapper 扫描
 @SpringBootApplication
-@EnableTransactionManagement //开启 事物  Service方法上添加注解 @Transactional 便可
+@EnableTransactionManagement(proxyTargetClass = true) //开启 事物  Service方法上添加注解 @Transactional 便可
 public class SpringbootBeautifulApplication {
 
 	public static void main(String[] args) {

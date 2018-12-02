@@ -12,7 +12,7 @@ import java.util.List;
 
 
 @Service
-//@Transactional
+@Transactional
 public class DeptServiceImpl implements DeptService {
 
     @Autowired
@@ -24,4 +24,13 @@ public class DeptServiceImpl implements DeptService {
 
         return departmentMapper.selectDeptList();
     }
+
+    @Override
+    @Transactional //事务配置成功
+    public void saveDepartment(Department department) {
+        departmentMapper.insertDepartment(department);
+        //int a = 1/0;
+    }
+
+
 }

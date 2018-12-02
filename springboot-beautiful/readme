@@ -8,3 +8,11 @@ CREATE TABLE `department` (
 `name` varchar(255) DEFAULT NULL ,
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+
+springboot 错误处理机制 参考 ErrorMvcAutoConfiguration 配置类
+
+4.集成war包  步骤
+    4.1 继承 org.springframework.boot.web.support.SpringBootServletInitializer 类 覆盖
+    configure(SpringApplicationBuilder)方法
+    4.2 maven  <packaging>war</packaging>
+
