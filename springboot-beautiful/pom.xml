@@ -44,7 +44,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
         <!-- https://github.com/redisson/redisson/tree/master/redisson-spring-boot-starter#spring-boot-starter -->
         <dependency>

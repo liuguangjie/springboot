@@ -32,12 +32,12 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss # 日期类格式化
     default-property-inclusion: non_null #忽略空字段
-  # thymeleaf 模板配置
-  thymeleaf:
-    suffix: .html
+  # freemarker 模板配置
+  freemarker:
     enabled: true
-    mode: HTML
-    # prefix: classpath:/templates  # 基本映射路径
+    charset: utf-8
+    suffix: .ftl
+    cache: false
   # springboot 和 redisson 整合 starter
   redis:
     database: 0
