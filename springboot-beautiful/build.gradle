@@ -1,0 +1,56 @@
+buildscript {
+    repositories {
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.19.RELEASE'
+    }
+}
+plugins {
+    id 'org.springframework.boot' version '1.5.19.RELEASE'
+    id 'net.ltgt.apt' version '0.10' // lombok 编译插件 省略 get 和 set方法编写
+    id 'java'
+}
+group 'com.springboot'
+version '0.0.1'
+
+sourceCompatibility = 1.8
+
+
+
+repositories {
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    mavenCentral()
+    jcenter()
+
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-aop')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+    compile('org.redisson:redisson-spring-boot-starter:3.9.1')
+    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')
+    compile('mysql:mysql-connector-java')
+    compile('org.apache.commons:commons-lang3:3.8.1')
+    compile('com.github.pagehelper:pagehelper:5.0.0')
+    compile('com.github.pagehelper:pagehelper-spring-boot-autoconfigure:1.2.3')
+    compile('com.github.pagehelper:pagehelper-spring-boot-starter:1.2.3')
+    compile('com.alibaba:druid:1.1.8')
+    compile('org.projectlombok:lombok')
+    compileOnly('org.springframework.boot:spring-boot-configuration-processor')
+
+    testCompile('junit:junit:4.12')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+
+    //apt 'org.projectlombok:lombok'
+}
+
+
+// 插件搜索地址 https://plugins.gradle.org/
+// 后续在来看看
